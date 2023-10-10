@@ -41,6 +41,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Huawei Echolife EG8145V5 (Router)
 - Bash scripting (For linux terminal)
 - Ubuntu Server OS (Linux Dist.)
+- Htop
 - OpenSSH
 - Jellyfin
 - NextCloud
