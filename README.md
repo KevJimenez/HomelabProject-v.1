@@ -29,7 +29,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 ### Technologies Used
 
  **Server Specs:**
- - Laptop Model: Dell 7447
+ - Laptop Model: Dell Inspiron 7447
  - Processor: Intel i7-4710HQ (4C | 8T)
  - Memory: 8GB DDR3L 1600mhz
  - Graphics: Intel HD 4600 (Integrated), Nvidia GTX 850M (Dedicated)
