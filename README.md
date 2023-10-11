@@ -41,7 +41,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Host PC/Laptop
 - Cat 5e LAN Cables (For 1 gigabit transfer speeds) 
 - Huawei Echolife EG8145V5 (Router)
-- Ubuntu Server OS (Linux Dist.)
+- Ubuntu Server 22.04.3 LTS
 - Docker
 - Htop
 - OpenSSH
