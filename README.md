@@ -28,6 +28,8 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 ### Technologies Used
 
+![dell7447](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/photo_2023-10-11_11-27-36.jpg?raw=true)
+
  **Server Specs:**
  - Laptop Model: Dell Inspiron 14 7447
  - Processor: Intel i7-4710HQ (4C | 8T)
