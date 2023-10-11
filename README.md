@@ -2,7 +2,7 @@
 
 ### Project Description
 
-Repurposing my old laptop to a test server running multiple services (ie. JellyFin, Pihole, NextCloud, etc.) using an Ubuntu Server distribution.
+Repurposing my old laptop to a test server running multiple services (ie. JellyFin, Pihole, NextCloud, etc.) using an Ubuntu Server.
 
 ### Table of Contents
 
@@ -41,6 +41,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Huawei Echolife EG8145V5 (Router)
 - Bash scripting (For linux terminal)
 - Ubuntu Server OS (Linux Dist.)
+- Docker
 - Htop
 - OpenSSH
 - Jellyfin
