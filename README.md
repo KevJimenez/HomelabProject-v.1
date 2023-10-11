@@ -41,7 +41,6 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Host PC/Laptop
 - Cat 5e LAN Cables (For 1 gigabit transfer speeds) 
 - Huawei Echolife EG8145V5 (Router)
-- Bash scripting (For linux terminal)
 - Ubuntu Server OS (Linux Dist.)
 - Docker
 - Htop
