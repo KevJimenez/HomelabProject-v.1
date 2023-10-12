@@ -36,7 +36,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    - Memory: `8GB DDR3L 1600mhz`
    - Graphics: `Intel HD 4600 (Integrated), Nvidia GTX 850M (Dedicated)`
    - Storage: `128GB SSD (OS Drive), 140GB HDD (Storage Drive`
->         
+         
 **Others:**
 - Host PC/Laptop
 - Cat 5e LAN Cables (For 1 gigabit transfer speeds) 
@@ -59,7 +59,17 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Ubuntu Focal 20.04 (LTS)
 
 #### Installation
-**Htop Setup**
+**Ubuntu 22.04 Server OS Installation:**
+1. Download Ubuntu Server OS [here](https://ubuntu.com/download/server).
+2. Create a bootable USB drive for Ubuntu OS (In this case, I used Ventoy).
+3. Insert bootable USB into the server PC
+4. Boot into BIOS in the server PC.
+5. Change boot priority to the Ubuntu USB Drive (You can also boot override if your BIOS has that).
+6. Follow on-screen instructions for Ubuntu install.
+   
+> **_NOTE:_** Be sure to include OpenSSH during installation to access server using the CLI.
+    
+**Htop Setup:**
 1. Run apt update and apt upgrade in the CLI
 
    ```bash
@@ -104,6 +114,34 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
     ```bash
     sudo docker run hello-world
     ```
+
+**Jellyfin Setup: (Docker method)**
+1. Install docker
+2. Using the CLI, download the latest docker image for Jellyfin
+   
+   ```bash
+   docker install jellyfin/jellyfin
+   ```
+4. Create cache,config, and media directories as per Jellyfin container requirements:
+   
+   ```bash
+   mkdir /home/kev/jellyfin
+   cd /home/kev/jellyfin
+   mkdir cache config media
+   ```
+5. Run Jellyfin
+
+   ```bash
+   docker run -d \
+   --name jellyfin \
+   --user 1000:1000 \
+   --net=host \
+   --volume /home/kev/jellyfin/config:/config \
+   --volume /home/kev/jellyfin/cache:/cache \
+   --mount type=bind,source=/home/kev/jellyfin/media,target=/media \
+   --restart=unless-stopped \
+   jellyfin/jellyfin
+   ```
 
    
 
