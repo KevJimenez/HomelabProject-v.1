@@ -67,7 +67,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 5. Change boot priority to the Ubuntu USB Drive (You can also boot override if your BIOS has that).
 6. Follow on-screen instructions for Ubuntu install.
    
-> **_NOTE:_** Be sure to include OpenSSH during installation to access server using the CLI.
+> **_NOTE:_** Be sure to include OpenSSH during installation to access server remotely.
     
 **Htop Setup:**
 1. Run apt update and apt upgrade in the CLI
@@ -75,6 +75,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    ```bash
    sudo apt update && sudo apt upgrade
    ```
+   
 2. Install htop using the apt command
 
    ```bash
@@ -87,6 +88,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    ```bash
    for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
    ```
+   
 2. Install the Docker Repository
 
    ```bash
@@ -104,11 +106,13 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
       sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     sudo apt-get update
     ```
+   
 3. Install Docker Package
 
    ```bash
    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
+   
 4. Verify that Docker is installed
 
     ```bash
@@ -122,14 +126,53 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    ```bash
    docker install jellyfin/jellyfin
    ```
-4. Create cache,config, and media directories as per Jellyfin container requirements:
+   
+3. Create cache,config, and media directories as per Jellyfin container requirements:
    
    ```bash
    mkdir /home/kev/jellyfin
    cd /home/kev/jellyfin
    mkdir cache config media
    ```
-5. Run Jellyfin
+   
+4. Auto mounting the internal hard drive with media content
+
+   4.1 Run to know the media storage details
+   
+   ```bash
+   lsblk -o NAME,FSTYPE,UUID,MOUNTPOINTS
+   ```
+   
+   4.2 Edit the fstab file
+   
+   ```bash
+   sudo nano /etc/fstab
+   ```
+   
+   4.3 Input the UUID, Mountpoint, drive type of the media storage with this format
+   
+   ```bash
+   UUID=<UUID> <PATH_TO_MOUNT> <DRIVE_TYPE>  defaults        0       0
+   ```
+   *In my case:*
+   
+   ```bash
+   UUID=35d41abe-a9ae-4f96-9951-a6d406efe569 /home/kev/jellyfin/media ext4 defaults 0 0
+   ```
+   
+   4.4 Restart Ubuntu Server to apply changes
+   
+   ```bash
+   sudo reboot
+   ```
+
+   4.5 Check if media storage is mounted properly
+   
+   ```bash
+   lsblk
+   ```
+   
+6. Run Jellyfin
 
    ```bash
    docker run -d \
@@ -142,8 +185,6 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    --restart=unless-stopped \
    jellyfin/jellyfin
    ```
-
-   
 
 ### Usage
 
