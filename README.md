@@ -26,6 +26,8 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Self-hosted cloud storage accessible to the internet (NextCloud)
 - Web ad-blocker (DNS Filtering) (Pi-hole)
 - Recursive DNS for added internet security (Unbound)
+- Monitor server status (Htop)
+- App packager to avoid dependency conflict. Easier to run than VMs. (Docker)
 
 ### Technologies Used
 
