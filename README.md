@@ -149,7 +149,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    sudo nano /etc/fstab
    ```
    
-   4.3 Input the UUID, Mountpoint, drive type of the media storage with this format
+   4.3 Input the UUID, Mountpoint, and drive type of the media storage in this format
    
    ```bash
    UUID=<UUID> <PATH_TO_MOUNT> <DRIVE_TYPE>  defaults        0       0
@@ -185,6 +185,16 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    --restart=unless-stopped \
    jellyfin/jellyfin
    ```
+
+**Pi-hole Setup: (Docker method)**
+1. Setup a static IP Address for your server
+2. Install Pi-hole using this command
+   
+   ```bash
+   curl -sSL https://install.pi-hole.net | bash
+   ```
+
+3.
 
 ### Usage
 
