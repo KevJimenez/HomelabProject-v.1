@@ -52,6 +52,9 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Pi-hole
 - Unbound
 - NextCloud
+- Tailscale
+- MariaDB
+- Apache
   
 ### Getting Started
 
@@ -309,8 +312,213 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 13. Set "Custom 1 (IPV4)" to 127.0.0.1#5335
 14. Scroll down to hit save
 15. You can choose to set your DNS servers through the main router or you can do it by device. I will be doing it per device for testing purposes.
+
+**Tailscale Setup:**
+1. Login to Tailscale Web (I used my GitHub account.)
+2. Install Tailscale on my Ubuntu server.
+3. Run this in the CLI
    
+   ```bash
+    curl -fsSL https://tailscale.com/install.sh | sh
+   ```
    
+5. Run Tailscale on Ubuntu Server as an Exit node and accept Pi-Hole DNS Server
+   
+   ```bash
+   tailscale up --accept-dns=false --advertise-exit-node
+   ```
+   
+6. Register your devices to Tailscale (see [link](https://tailscale.com/download/) to follow steps according to your device).
+   
+*Tailscale using Pi-Hole as DNS Server Setup*
+
+1. Go to Tailscale home and click DNS to set DNS Server to Pi-Hole.
+2. Under Global nameservers, add nameserver.
+3. Click on custom then enter the IPV4 address provided by Tailscale. (Do not put in your local IPV4 address as Tailscale provides it's own IPV4 address.)
+4. Toggle Override local DNS
+   
+*Tailscale as a 'commercial' VPN Setup*
+
+1. Go to the Machines tab
+2. Click on the Ubuntu Server's settings
+3. Edit route settings > Toggle "Use as Exit Node".
+
+**Nextcloud Setup:**
+1. Check if you have wget.
+   
+   ```bash
+     which wget
+   ``` 
+> 1.1 If you don't have wget, run this:
+  ```bash
+    sudo apt install wget
+  ```
+2. Run this command to download the Nextcloud zip file.
+
+   ```bash
+     wget https://download.nextcloud.com/server/releases/latest.zip
+   ```
+
+3. Setup MariaDB and check if it runs
+
+   ```bash
+     sudo apt install mariadb-server
+   ```
+   ```bash
+     systemctl status mariadb
+   ```
+
+4. Run the secure installation script and follow the promts.
+
+   ```bash
+   sudo mysql_secure_installation
+   ```
+
+5. Creating the Nextcloud DB. Access the mariadb console first:
+
+   ```bash
+   sudo mariadb
+   ```
+
+6. Creating the Database and setting permissions:
+
+   ```bash
+   CREATE DATABASE nextcloud;
+   ````
+   ```bash
+   SHOW DATABASES;
+   ```
+   ```bash
+   GRANT ALL PRIVILEGES ON nextcloud.* TO 'kev'@'localhost' IDENTIFIED BY '*insert your password*';
+   ```
+   ```bash
+   FLUSH PRIVILEGES;
+   ```
+
+7. Setting up Apache by first installing it:
+
+   ```bash
+   sudo apt install apache2
+   ```
+
+8. Check apache status
+
+   ```bash
+   systemctl status apache2
+   ```
+
+9. Enable PHP extensions
+
+    ```bash
+    sudo phpenmod bcmath gmp imagick intl
+    ```
+
+10. Check if you have unzip:
+
+    ```bash
+    which unzip
+    ```
+> 10.1 If you don't have wget, run this:
+
+  ```bash
+    sudo apt install unzip
+  ```
+
+11. Unzip the NextCloud zip file downloaded earlier
+
+    ```bash
+    unzip latest.zip
+    ```
+
+12. Remove the zip file 
+
+     ```bash
+    rm latest.zip
+    ```
+     
+13. Move the nextcloud folder and set pemissions
+
+    ```bash
+    sudo chown -R www-data:www-data nextcloud
+    ```
+    ```bash
+    sudo mv nextcloud /var/www
+    ```
+    
+15. Disable the Apache default website
+    
+    ```bash
+    sudo a2dissite 000-default.conf
+    ```
+
+16. Setup the Apache to serve Nextcloud instance. Make a conf file.
+
+    ```bash
+    sudo nano /etc/apache2/sites-available/nextcloud.conf
+    ```
+
+17. Add this to the newly made conf file.
+
+    ```bash 
+    <VirtualHost *:80>
+    DocumentRoot "/var/www/nextcloud"
+    ServerName nextcloud
+
+     <Directory "/var/www/nextcloud">
+        Options MultiViews FollowSymlinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+     </Directory>
+
+     TransferLog /var/log/apache2/nextcloud.log
+     ErrorLog /var/log/apache2/nextcloud.log
+
+    </VirtualHost>
+    ```
+
+18. Enable the site:
+
+    ```bash
+    sudo a2ensite apache-config-nextcloud.conf
+    ```
+
+19. Edit the PHP file
+
+    ```bash
+    sudo nano/etc/php/8.1/apache2/php.ini
+    ```
+
+20. Replace the following to these values and uncomment certain lines using nano.
+
+    ```
+    memory_limit = 512M
+    upload_max_filesize = 200M
+    max_execution_time = 360
+    post_max_size = 200M
+    date.timezone = America/Detroit
+    opcache.enable=1
+    opcache.interned_strings_buffer=8
+    opcache.max_accelerated_files=10000
+    opcache.memory_consumption=128
+    opcache.save_comments=1
+    opcache.revalidate_freq=1
+    ```
+
+21. Enable these PHP mods for Apache
+
+    ```bash
+    sudo a2enmod dir env headers mime rewrite ssl
+    ```
+
+22. Restart Apache
+
+    ```bash
+    sudo systemctl restart apache2
+    ```
+
+23. Login to NextCloud using local ip address.
+
 ### Usage
 
 Explain how to use the project once it's set up. Provide examples, screenshots, or use cases to demonstrate its functionality.
@@ -319,9 +527,6 @@ Explain how to use the project once it's set up. Provide examples, screenshots, 
 
 If your project has configuration options, document how users can customize and configure the settings.
 
-### Contributing
-
-Explain how others can contribute to your project if it's open-source. Include guidelines for pull requests, issue reporting, and code style.
 
 ### License
 
@@ -340,9 +545,6 @@ Depending on the nature of your HomeLab project, you may want to include additio
 - Roadmap: Outline future development plans and features.
 - Changelog: Document version history and updates.
 
-### Example README Template
-
-Here's a simplified example of what a HomeLab project README might look like in Markdown:
 
 ```markdown
 # HomeLab Project: Smart Home Automation
