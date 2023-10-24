@@ -538,11 +538,12 @@ If your project has configuration options, document how users can customize and 
 - Can't seem to fix the Apache install (Solutions: https://askubuntu.com/questions/912638/error-module-php7-0-does-not-exist, and changing the port number of lighttpd to 8080)
 - Enabling Cron by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php' to the cron.php
 
-### Things that can be improved to the next version of my homelab:
+### Things that can be improved for the next version of my homelab:
 
 - Self-hosted VPN server like wireguard (Needs its own public IP to run, but my network is behind CGNAT, so the only option is to rent a Virtual Machine and run wireguard there).
 - NextCloud access through the public internet (Bit of skleptical on this one since my VPN setup is much more secure. Also requires a CGNAT internet, costs will be much higher. Can be done in the future).
 - NextCloud AIO (Will be installed in the docker container, much lighter to run, stable, and reliable).
+- Run services in docker for easy management and light resources (Did not run some services in docker in this version to learn and to practice troubleshooting)
 - Installing a reverse proxy if ever that I intended to run my services on the public internet without the use of VPN.
 - A new server build with power efficient parts, more storage, more RAM, and a better processor with Quick Sync for video encoding/decoding in Jellyfin.
 - Will run Proxmox in the new build for a much more versatile Hypervisor and run Virtual Machines and containers.
