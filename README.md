@@ -528,13 +528,40 @@ Explain how to use the project once it's set up. Provide examples, screenshots, 
 If your project has configuration options, document how users can customize and configure the settings.
 
 
-### License
+### Challenges:
 
-Specify the project's license (e.g., MIT License, GNU GPL) and provide a link to the full license text.
+**JellyFin Install**
+- Folder permissions (Changed Jellyfin permissions)
+- Jellyfin keeps restarting (Changed the file path of cache and config files during execution)
+
+**NextCloud Install**
+- Can't seem to fix the Apache install (Solutions: https://askubuntu.com/questions/912638/error-module-php7-0-does-not-exist, and changing the port number of lighttpd to 8080)
+- Enabling Cron by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php' to the cron.php
+
+### Things that can be improved to the next version of my homelab:
+
+- Self-hosted VPN server like wireguard (Needs its own public IP to run, but my network is behind CGNAT, so the only option is to rent a Virtual Machine and run wireguard there).
+- NextCloud access through the public internet (Bit of skleptical on this one since my VPN setup is much more secure. Also requires a CGNAT internet, costs will be much higher. Can be done in the future).
+- NextCloud AIO (Will be installed in the docker container, much lighter to run, stable, and reliable).
+- Installing a reverse proxy if ever that I intended to run my services on the public internet without the use of VPN.
+- A new server build with power efficient parts, more storage, more RAM, and a better processor with Quick Sync for video encoding/decoding in Jellyfin.
+- Will run Proxmox in the new build for a much more versatile Hypervisor and run Virtual Machines and containers.
+- A router that can run Pfsense for VLANs and better firewall.
+
 
 ### Acknowledgments
 
-Give credit to any individuals, libraries, or resources that were helpful in the development of your project.
+I would like to thank the following as it helped me build and learn much more about self-hosting and the linux operating system:
+
+- https://www.youtube.com/@LearnLinuxTV
+- https://www.youtube.com/@WolfgangsChannel
+- https://www.youtube.com/@TechnoTim
+- https://www.youtube.com/@NetworkChuck
+- https://www.youtube.com/@TechHut
+- https://www.reddit.com/r/homelab/
+- https://www.reddit.com/r/HomeNetworking/
+- https://www.reddit.com/r/selfhosted/
+
 
 ### Additional Sections
 
