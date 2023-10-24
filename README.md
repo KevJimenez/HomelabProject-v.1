@@ -1,10 +1,10 @@
 # HomelabTestProject-v.1
 
-### Project Description
+## Project Description
 
 Repurposing my old laptop to a test server running multiple services (ie. JellyFin, Pihole, NextCloud, etc.) using an Ubuntu Server.
 
-### Table of Contents
+## Table of Contents
 
 - [HomelabTestProject-v.1](#homelabtestproject-v.1)
 - [Project Description](#project-description)
@@ -20,7 +20,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-### Features
+## Features
 
 - Offline media server (Jellyfin)
 - Self-hosted cloud storage accessible to the internet (NextCloud)
@@ -29,7 +29,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Monitor server status (Htop)
 - App packager to avoid dependency conflict. Easier to run than VMs. (Docker)
 
-### Technologies Used
+## Technologies Used
 
 ![dell7447](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/photo_2023-10-11_11-27-36.jpg?raw=true)
 
@@ -56,9 +56,9 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - MariaDB
 - Apache
   
-### Getting Started
+## Getting Started
 
-#### Prerequisites
+### Prerequisites
 
 **Docker Supported OS (for Ubuntu):**
 - Ubuntu Lunar 23.04
@@ -66,7 +66,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Ubuntu Jammy 22.04 (LTS)
 - Ubuntu Focal 20.04 (LTS)
 
-#### Installation
+### Installation
 **Ubuntu 22.04 Server OS Installation:**
 1. Download Ubuntu Server OS [here](https://ubuntu.com/download/server).
 2. Create a bootable USB drive for Ubuntu OS (In this case, I used Ventoy).
