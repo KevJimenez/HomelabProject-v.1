@@ -384,7 +384,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
    ```bash
    CREATE DATABASE nextcloud;
-   ````
+   ```
    ```bash
    SHOW DATABASES;
    ```
