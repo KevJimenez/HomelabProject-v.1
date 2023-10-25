@@ -31,7 +31,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 ## Technologies Used
 
-![dell7447](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/photo_2023-10-11_11-27-36.jpg?raw=true)
+<img src="https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/photo_2023-10-11_11-27-36.jpg?raw=true" alt="dell7447" width="300" height="500"/>
 
  **Server Specs:**
  - Laptop Model: Dell Inspiron 14 7447
@@ -523,11 +523,6 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 Explain how to use the project once it's set up. Provide examples, screenshots, or use cases to demonstrate its functionality.
 
-### Configuration
-
-If your project has configuration options, document how users can customize and configure the settings.
-
-
 ### Challenges:
 
 **JellyFin Install**
@@ -536,7 +531,7 @@ If your project has configuration options, document how users can customize and 
 
 **NextCloud Install**
 - Can't seem to fix the Apache install (Solutions: https://askubuntu.com/questions/912638/error-module-php7-0-does-not-exist, and changing the port number of lighttpd to 8080)
-- Enabling Cron by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php' to the cron.php
+- Enabling cron automation by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php --define apc.enable_cli=1' to 'sudo crontab -u root -e'
 
 ### Things that can be improved for the next version of my homelab:
 
