@@ -34,6 +34,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 <img src="https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/photo_2023-10-11_11-27-36.jpg?raw=true" alt="dell7447" width="300" height="500"/>
 
  **Server Specs:**
+ 
  - Laptop Model: Dell Inspiron 14 7447
    - Processor: `Intel i7-4710HQ (4C | 8T)`
    - Memory: `8GB DDR3L 1600mhz`
@@ -41,6 +42,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
    - Storage: `128GB SSD (OS Drive), 140GB HDD (Storage Drive)`
          
 **Others:**
+
 - Host PC/Laptop
 - Cat 5e LAN Cables (For 1 gigabit transfer speeds) 
 - Huawei Echolife EG8145V5 (Router)
@@ -67,7 +69,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Ubuntu Focal 20.04 (LTS)
 
 ### Installation
-**Ubuntu 22.04 Server OS Installation:**
+#### Ubuntu 22.04 Server OS Installation:
 1. Download Ubuntu Server OS [here](https://ubuntu.com/download/server).
 2. Create a bootable USB drive for Ubuntu OS (In this case, I used Ventoy).
 3. Insert bootable USB into the server PC
