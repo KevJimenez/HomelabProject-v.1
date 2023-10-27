@@ -544,7 +544,7 @@ Explain how to use the project once it's set up. Provide examples, screenshots, 
 - Installing a reverse proxy if ever that I intended to run my services on the public internet without the use of VPN.
 - A new server build with power efficient parts, more storage, more RAM, and a better processor with Quick Sync for video encoding/decoding in Jellyfin.
 - Will run Proxmox in the new build for a much more versatile Hypervisor and run Virtual Machines and containers.
-- A router that can run Pfsense for VLANs and better firewall.
+- A router that can run OPNsense and a managed switch for VLANs and better firewall.
 
 
 ### Acknowledgments
