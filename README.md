@@ -70,14 +70,17 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 ### Prerequisites
 
-**Docker Supported OS (for Ubuntu):**
-- Ubuntu Lunar 23.04
-- Ubuntu Kinetic 22.10
-- Ubuntu Jammy 22.04 (LTS)
-- Ubuntu Focal 20.04 (LTS)
-
-**Minimum Recommended Hardware and Software for Certain Services:**
-- Pi-hole (Hardware: 4GB free storage space, 512MB RAM | Software: Ubuntu 20.x/22.x/23.x ARM/x86_64) Also needs static IP to run
+- [Ubuntu Server](https://ubuntu.com/server/docs/installation)
+- [Docker](https://docs.docker.com/engine/install/ubuntu/#prerequisites)
+- [Jellyfin](https://jellyfin.org/docs/general/administration/hardware-selection/)
+- [Pi-Hole](https://docs.pi-hole.net/main/prerequisites/)
+- Unbound
+  - Device running Pi-Hole
+  - Access to SSH
+- [NextCloud](https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html)
+- [Tailscale](https://tailscale.com/kb/1017/install/)
+- [Apache](https://docs.oracle.com/cd/E19879-01/821-0182/fwboh/index.html)
+- [WinSCP](https://winscp.net/eng/docs/requirements)
 
 ### Installation
 #### Ubuntu 22.04 Server OS Installation:
