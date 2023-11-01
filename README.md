@@ -30,6 +30,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Recursive DNS for added internet security (Unbound)
 - Monitor server status (Htop)
 - App packager to avoid dependency conflict. Easier to run than VMs. (Docker)
+- VPN for encryption when using public network and to access local services remotely (Tailscale)
 
 ## Technologies Used
 
