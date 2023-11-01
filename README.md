@@ -10,6 +10,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
+- [Diagram](#diagram)
 - [Technologies Used](#technologies-used)
     - [Hardware](#hardware)
     - [Software](#software)
@@ -31,6 +32,9 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Monitor server status (Htop)
 - App packager to avoid dependency conflict. Easier to run than VMs. (Docker)
 - VPN for encryption when using public network and to access local services remotely (Tailscale)
+
+## Diagram
+
 
 ## Technologies Used
 
@@ -63,6 +67,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Tailscale
 - MariaDB
 - Apache
+- WinSCP
   
 ## Getting Started
 
@@ -73,6 +78,9 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Ubuntu Kinetic 22.10
 - Ubuntu Jammy 22.04 (LTS)
 - Ubuntu Focal 20.04 (LTS)
+
+**Minimum Recommended Hardware and Software for Certain Services:**
+- Pi-hole (Hardware: 4GB free storage space, 512MB RAM | Software: Ubuntu 20.x/22.x/23.x ARM/x86_64) Also needs static IP to run
 
 ### Installation
 #### Ubuntu 22.04 Server OS Installation:
@@ -551,6 +559,7 @@ Explain how to use the project once it's set up. Provide examples, screenshots, 
 - A new server build with power efficient parts, more storage, more RAM, and a better processor with Quick Sync for video encoding/decoding in Jellyfin.
 - Will run Proxmox in the new build for a much more versatile Hypervisor and run Virtual Machines and containers.
 - A router that can run OPNsense and a managed switch for VLANs and better firewall.
+- UPS is also a nice to have for sudden power outages and failure.
 
 
 ### Acknowledgments
