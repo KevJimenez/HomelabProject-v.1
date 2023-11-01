@@ -10,7 +10,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
-- [Diagram](#diagram)
+- [Homelab Diagram](#homelab-diagram)
 - [Technologies Used](#technologies-used)
     - [Hardware](#hardware)
     - [Software](#software)
@@ -30,7 +30,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - App packager to avoid dependency conflict. Easier to run than VMs. (Docker)
 - VPN for encryption when using public network and to access local services remotely (Tailscale)
 
-## Diagram
+## Homelab Diagram
 ![diagram](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/test.drawio%20(1).png)
 
 ## Technologies Used
