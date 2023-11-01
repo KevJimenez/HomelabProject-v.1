@@ -533,7 +533,7 @@ Explain how to use the project once it's set up. Provide examples, screenshots, 
 
 **NextCloud Install**
 - Can't seem to fix the Apache install (Solutions: https://askubuntu.com/questions/912638/error-module-php7-0-does-not-exist, and changing the port number of lighttpd to 8080)
-- Enabling cron automation by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php --define apc.enable_cli=1' to 'sudo crontab -u root -e'
+- Enabling cron automation by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php --define apc.enable_cli=1' to 'sudo crontab -u root -e' or crontab.
 
 ### Things that can be improved for the next version of my homelab:
 
