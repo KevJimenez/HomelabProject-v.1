@@ -31,7 +31,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - VPN for encryption when using public network and to access local services remotely (Tailscale)
 
 ## Homelab Diagram
-![diagram](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/test.drawio%20(1).png)
+![diagram](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/hldiagram.png)
 
 ## Technologies Used
 
