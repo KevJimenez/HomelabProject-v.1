@@ -18,9 +18,6 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ## Features
@@ -34,7 +31,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - VPN for encryption when using public network and to access local services remotely (Tailscale)
 
 ## Diagram
-
+<img src="https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/HomelabV1.png?raw=true" alt="dell7447" width="1000" height="800"/>
 
 ## Technologies Used
 
