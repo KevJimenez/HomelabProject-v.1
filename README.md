@@ -11,6 +11,8 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+    - [Hardware](#hardware)
+    - [Software](#software)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -31,6 +33,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 ## Technologies Used
 
+### Hardware:
 <img src="https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/photo_2023-10-11_11-27-36.jpg?raw=true" alt="dell7447" width="300" height="500"/>
 
  **Server Specs:**
@@ -44,9 +47,11 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 **Others:**
 
 - Host PC/Laptop
-- Cat 5e LAN Cables (For 1 gigabit transfer speeds) 
+- Cat 5e LAN Cables (For 1 gigabit transfer speeds)
 - Huawei Echolife EG8145V5 (Router)
-- Ubuntu Server 22.04.3 LTS
+  
+ ### Software:
+- Ubuntu Server 22.04.3 LTS (Bare Metal)
 - Docker
 - Htop
 - OpenSSH
