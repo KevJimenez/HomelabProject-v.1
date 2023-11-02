@@ -18,6 +18,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Challenges](#challenges)
 - [Future Improvements](#things-that-can-be-improved-for-the-next-version-of-my-homelab)
 - [Acknowledgments](#acknowledgments)
 
