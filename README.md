@@ -539,6 +539,8 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 ### Usage
 
+Click on the image below to open the youtube link
+
  [![usage](https://img.youtube.com/vi/koYdHIqc3Ng/0.jpg)](https://www.youtube.com/watch?v=koYdHIqc3Ng)
  
 
