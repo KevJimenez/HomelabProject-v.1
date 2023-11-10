@@ -20,6 +20,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - [Usage](#usage)
 - [Challenges](#challenges)
 - [Future Improvements](#things-that-can-be-improved-for-the-next-version-of-my-homelab)
+    - [Diagram](#homelab-v.2-diagram)
 - [Acknowledgments](#acknowledgments)
 
 ## Features
@@ -537,14 +538,14 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 23. Login to NextCloud using local ip address.
 
-### Usage
+## Usage
 
 Click on the image below to open the youtube link
 
  [![usage](https://img.youtube.com/vi/koYdHIqc3Ng/0.jpg)](https://www.youtube.com/watch?v=koYdHIqc3Ng)
  
 
-### Challenges:
+## Challenges:
 
 **JellyFin Install**
 - Folder permissions (Changed Jellyfin permissions)
@@ -554,7 +555,7 @@ Click on the image below to open the youtube link
 - Can't seem to fix the Apache install (Solutions: https://askubuntu.com/questions/912638/error-module-php7-0-does-not-exist, and changing the port number of lighttpd to 8080)
 - Enabling cron automation by appending '*/5  *  *  *  * php -f /var/www/nextcloud/cron.php --define apc.enable_cli=1' to 'sudo crontab -u root -e' or crontab.
 
-### Things that can be improved for the next version of my homelab:
+## Things that can be improved for the next version of my homelab:
 
 - Self-hosted VPN server like wireguard (Needs its own public IP to run, but my network is behind CGNAT, so the only option is to rent a Virtual Machine and run wireguard there).
 - NextCloud access through the public internet (Bit of skleptical on this one since my VPN setup is much more secure. Also requires a CGNAT internet, costs will be much higher. Can be done in the future).
@@ -566,8 +567,12 @@ Click on the image below to open the youtube link
 - A router that can run OPNsense and a managed switch for VLANs and better firewall.
 - UPS is also a nice to have for sudden power outages and failure.
 
+### Homelab v.2 Diagram
 
-### Acknowledgments
+![diagram](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/homelab-v2%20(3).png)
+
+
+## Acknowledgments
 
 I would like to thank the following as it helped me build and learn much more about self-hosting and the linux operating system:
 
