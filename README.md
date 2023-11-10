@@ -6,7 +6,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 
 ## Table of Contents
 
-- [HomelabTestProject-v.1](#homelabtestproject-v.1)
+- [HomelabProject-v.1](#homelabproject-v.1)
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
