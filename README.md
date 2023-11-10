@@ -20,7 +20,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - [Usage](#usage)
 - [Challenges](#challenges)
 - [Future Improvements](#things-that-can-be-improved-for-the-next-version-of-my-homelab)
-    - [Diagram](#homelab-v.2-diagram)
+    - [Diagram](#homelab-v2-diagram)
 - [Acknowledgments](#acknowledgments)
 
 ## Features
