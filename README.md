@@ -1,8 +1,8 @@
-# HomelabTestProject-v.1
+# HomelabProject-v.1
 
 ## Project Description
 
-Repurposing my old laptop to a test server running multiple services (ie. JellyFin, Pihole, NextCloud, etc.) using an Ubuntu Server.
+Repurposing my old laptop to a test server running multiple services (ie. JellyFin, Pihole, NextCloud, etc.) using an Ubuntu Server and a brief overview on how to use my homelab and how its structured.
 
 ## Table of Contents
 
