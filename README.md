@@ -1,12 +1,12 @@
-# HomelabProject-v.1
+# HomelabProject-v.1.2
 
 ## Project Description
 
-Repurposing my old laptop to a test server running multiple services (ie. JellyFin, Pihole, NextCloud, etc.) using an Ubuntu Server and a brief overview on how to use my homelab and how its structured.
+Repurposing my old laptop to a test server running multiple services (ie. Jellyfin, Pihole, NextCloud, etc.), virtual machines, and containers using a type 1 hypervisor (Proxmox) and a brief overview on how to use my homelab and how it is structured.
 
 ## Table of Contents
 
-- [HomelabProject-v.1](#homelabproject-v.1)
+- [HomelabProject-v.1.2](#homelabproject-v.1.2)
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
@@ -28,10 +28,10 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Offline media server (Jellyfin)
 - Self-hosted cloud storage accessible to the internet (NextCloud)
 - Web ad-blocker (DNS Filtering) (Pi-hole)
-- Recursive DNS for added internet security (Unbound)
 - Monitor server status (Htop)
 - App packager to avoid dependency conflict. Easier to run than VMs. (Docker)
 - VPN for encryption when using public network and to access local services remotely (Tailscale)
+- Can run multiple Virtual Machines running different Operating Systems (Can be used for experimentation with networking and bash scripting)
 
 ## Homelab Diagram
 ![diagram](https://github.com/KevJimenez/HomelabTestProject-v.1/blob/main/hldiagram.png)
@@ -56,7 +56,7 @@ Repurposing my old laptop to a test server running multiple services (ie. JellyF
 - Huawei Echolife EG8145V5 (Router)
   
  ### Software:
-- Ubuntu Server 22.04.3 LTS (Bare Metal)
+- Proxmox Hypervisor (Bare Metal)
 - Docker
 - Htop
 - OpenSSH
