@@ -579,7 +579,6 @@ I would like to thank the following as it helped me build and learn much more ab
 - https://www.youtube.com/@LearnLinuxTV
 - https://www.youtube.com/@WolfgangsChannel
 - https://www.youtube.com/@TechnoTim
-- https://www.youtube.com/@NetworkChuck
 - https://www.youtube.com/@TechHut
 - https://www.reddit.com/r/homelab/
 - https://www.reddit.com/r/HomeNetworking/
